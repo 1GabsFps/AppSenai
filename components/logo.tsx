@@ -13,6 +13,8 @@ const Logo = ({text, color}) => {
             borderBottomWidth: 1,
             borderBottomColor: '#000',
             padding: 50,
+            borderBottomLeftRadius: 5,
+            borderBottomRightRadius: 5,
         },
         logo: {
             marginTop: 20,

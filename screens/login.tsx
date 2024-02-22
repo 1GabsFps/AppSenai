@@ -33,11 +33,12 @@ function login() {
 const styles = StyleSheet.create({
     text : {
         fontSize: 20,
+        fontWeight: '500',
         color: 'black',
         alignContent: 'center',
         textAlign: 'center',
         marginBottom: 20,
-    },
+    }, 
     link: {
     fontSize: 14,
     color: 'blue',
