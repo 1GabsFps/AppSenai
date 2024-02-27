@@ -14,22 +14,22 @@ const itens = () => {
                 </TouchableOpacity>
             </View>
             <View>
-                <Itens id="1" item="item 1" />
-                <Itens id="2" item="item 2" />
-                <Itens id="1" item="item 1" />
-                <Itens id="2" item="item 2" />
-                <Itens id="1" item="item 1" />
-                <Itens id="2" item="item 2" />
-                <Itens id="1" item="item 1" />
-                <Itens id="2" item="item 2" />
-                <Itens id="1" item="item 1" />
-                <Itens id="2" item="item 2" />
-                <Itens id="1" item="item 1" />
-                <Itens id="2" item="item 2" />
-                <Itens id="1" item="item 1" />
-                <Itens id="2" item="item 2" />
-                <Itens id="1" item="item 1" />
-                <Itens id="2" item="item 2" />
+                <Itens id="956389" item="CADEIRA  SENAI" />
+                <Itens id="956389" item="CADEIRA  SENAI" />
+                <Itens id="956389" item="CADEIRA  SENAI" />
+                <Itens id="956389" item="CADEIRA  SENAI" />
+                <Itens id="956389" item="CADEIRA  SENAI" />
+                <Itens id="956389" item="CADEIRA  SENAI" />
+                <Itens id="956389" item="CADEIRA  SENAI" />
+                <Itens id="956389" item="CADEIRA  SENAI" />
+                <Itens id="956389" item="CADEIRA  SENAI" />
+                <Itens id="956389" item="CADEIRA  SENAI" />
+                <Itens id="956389" item="CADEIRA  SENAI" />
+                <Itens id="956389" item="CADEIRA  SENAI" />
+                <Itens id="956389" item="CADEIRA  SENAI" />
+                <Itens id="956389" item="CADEIRA  SENAI" />
+                <Itens id="956389" item="CADEIRA  SENAI" />
+                <Itens id="956389" item="CADEIRA  SENAI" />
             </View>
         </ScrollView>
             <View style={styles.addButtonContainer}>

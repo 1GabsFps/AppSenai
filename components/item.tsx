@@ -27,7 +27,7 @@
             marginLeft: 25,
         },
         item: {
-            fontSize: 10,
+            fontSize: 15,
             fontWeight: '500',
             color: 'lightgray',
             alignContent: 'center',
