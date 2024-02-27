@@ -18,13 +18,14 @@ const InputField = ({ label, value, setValue, placeholder }) => {
 const styles = StyleSheet.create({
   input: {
     height: 40,
-    width: '80%',
+    width: '95%',
     margin: 12,
     padding: 10,
-    borderBottomColor: 'gray',
-    borderBottomWidth: 1,
-    marginBottom: 15,
-    marginLeft: 25,
+    borderWidth: 0,
+    borderColor: 'black',
+    backgroundColor: '#f5f5f5',
+    borderRadius: 10,
+
   },
   text: {
     fontSize: 14,
