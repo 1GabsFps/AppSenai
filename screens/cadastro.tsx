@@ -1,8 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity , Linking } from 'react-native';
-import { FontAwesome5 } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
-import React,{ useState } from 'react';
+import { View, ScrollView} from 'react-native';
+import React from 'react';
 import Logo from '../components/logo';
 import InputField from '../components/input';
 import Botao from '../components/botao';
@@ -14,16 +12,16 @@ function cadastro () {
         <View>
             <Logo text="Cadastre-se" color="red" />
         </View>
-        <View>
-            <InputField label="Nome" placeholder="Digite seu nome" />
-            <InputField label="Sobrenome" placeholder="Digite seu Sobrenome" />
-            <InputField label="Email" placeholder="Digite seu Email" />
-            <InputField label="Telefone" placeholder="Digite seu Telefone" />
-            <InputField label="Senha" placeholder="Digite sua Senha" />
-            <InputField label="Confirme sua Senha" placeholder="Confirme sua Senha" />
+        <ScrollView>
+            <InputField label="Nome" placeholder="Digite seu nome" showText={true} />
+            <InputField label="Sobrenome" placeholder="Digite seu Sobrenome" showText={true} />
+            <InputField label="Email" placeholder="Digite seu Email" showText={true} />
+            <InputField label="Telefone" placeholder="Digite seu Telefone" showText={true} />
+            <InputField label="Senha" placeholder="Digite sua Senha" showText={false} />
+            <InputField label="Confirme sua Senha" placeholder="Confirme sua Senha" showText={false}/>
             <Botao text="Cadastrar" color="black" />
 
-        </View>
+        </ScrollView>
         <StatusBar style="auto" />
     </View>
   );

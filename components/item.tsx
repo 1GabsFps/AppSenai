@@ -1,7 +1,12 @@
     import React from "react";
     import { Image, Text, View, StyleSheet } from "react-native";
 
-    const Itens = ({id, item }) => {
+type ItensProps = {
+    id: string,
+    item: string,
+}
+
+    const Itens = ({id, item }: ItensProps) => {
         return(
             <View style={styles.display}>
                 <Text style={styles.text}>{id}</Text>

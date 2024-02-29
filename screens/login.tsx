@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity , Linking, StatusBar } from "react-native";
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity , Linking, StatusBar  } from "react-native";
 import Logo from "../components/logo";
 import InputField from "../components/input";
 import Botao from "../components/botao";
@@ -13,8 +13,8 @@ function login() {
       <View>
         <Text style={styles.text} >Faça Login Para Acessar o Sistema!</Text>
 
-        <InputField label="Email:" placeholder="Digite Email" />
-        <InputField label="Senha:" placeholder="Digite sua Senha" />
+        <InputField label="Email:" placeholder="Digite Email" showText={true}/>
+        <InputField label="Senha:" placeholder="Digite sua Senha"showText={false} />
         <Botao text="Entrar" color="black" />
       </View>
       <View style={styles.links}>
@@ -25,7 +25,6 @@ function login() {
           <Text style={styles.link}>Esqueceu sua senha?</Text>
         </TouchableOpacity>
         </View>
-      <StatusBar style="auto" />
     </View>
   );
 }

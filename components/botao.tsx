@@ -1,7 +1,12 @@
 import React from "react";
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
 
-const Botao= ({text, color}) => {
+type BotaoProps = {
+    text: string,
+    color: string,
+}
+
+const Botao= ({text, color}: BotaoProps) => {
     const styles = StyleSheet.create({
         botao: {
             alignItems: 'center',
