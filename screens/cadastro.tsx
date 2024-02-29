@@ -13,12 +13,12 @@ function cadastro () {
             <Logo text="Cadastre-se" color="red" />
         </View>
         <ScrollView>
-            <InputField label="Nome" placeholder="Digite seu nome" showText={true} />
-            <InputField label="Sobrenome" placeholder="Digite seu Sobrenome" showText={true} />
-            <InputField label="Email" placeholder="Digite seu Email" showText={true} />
-            <InputField label="Telefone" placeholder="Digite seu Telefone" showText={true} />
-            <InputField label="Senha" placeholder="Digite sua Senha" showText={false} />
-            <InputField label="Confirme sua Senha" placeholder="Confirme sua Senha" showText={false}/>
+            <InputField label="Nome" placeholder="Digite seu nome" hideText={false} />
+            <InputField label="Sobrenome" placeholder="Digite seu Sobrenome" hideText={false} />
+            <InputField label="Email" placeholder="Digite seu Email" hideText={false} />
+            <InputField label="Telefone" placeholder="Digite seu Telefone" hideText={false} />
+            <InputField label="Senha" placeholder="Digite sua Senha" hideText={true} />
+            <InputField label="Confirme sua Senha" placeholder="Confirme sua Senha" hideText={true}/>
             <Botao text="Cadastrar" color="black" />
 
         </ScrollView>

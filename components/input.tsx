@@ -4,19 +4,18 @@ import { TextInput, Text, View, StyleSheet } from 'react-native';
 type InputFieldProps = {
   label: string,
   placeholder: string,
-  showText: boolean, 
+  hideText: boolean, 
 }
 
-const InputField = ({ label, placeholder, showText }: InputFieldProps) => {
+const InputField = ({ label, placeholder, hideText }: InputFieldProps) => {
   return (
     <View>
       <Text style={styles.text}>{label}</Text>
-      {showText ? (
         <TextInput
           style={styles.input}
           placeholder={placeholder}
+          secureTextEntry={hideText}
         />
-      ) : null}
     </View>
   );
 };
