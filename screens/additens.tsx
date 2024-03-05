@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import Header from "../components/header";
-import InventoryInput from "../components/img/invinput";
+import InventoryInput from "../components/invinput";
 import Bottom from "../components/bottom";
 export default function AddItens() {
     return(
