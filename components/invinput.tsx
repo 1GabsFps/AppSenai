@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
     inventoryInput: {
         marginLeft: 25,
         marginBottom: 10,
+        marginTop: 30,
         paddingTop: 14,
         position: 'relative',
     },

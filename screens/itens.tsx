@@ -2,6 +2,7 @@ import React from "react";
 import { View, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
 import Itens from "../components/item";
 import { AntDesign,FontAwesome5, FontAwesome6, Entypo, Foundation} from '@expo/vector-icons';
+import Bottom from "../components/bottom";
 
 const itens = () => {
     return (
@@ -35,10 +36,7 @@ const itens = () => {
             <View style={styles.addButtonContainer}>
                 <AntDesign name="pluscircle" size={50} color="red" />
             </View>
-            <View style={styles.display}>
-                <FontAwesome5 name="list-ol" size={24} color="#ffffff" />
-                <FontAwesome6 name="camera-rotate" size={24} color="#ffffff" />
-            </View>
+            <Bottom color="#ff0000" coloricons= "#ffffff" bottom={0} />
         </View>
     );
 };

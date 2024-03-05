@@ -5,7 +5,7 @@ export default function Header({ text, color, colortxt, icon1, icon2 }) {
     const styles = StyleSheet.create({
         displaytop: {
             padding: 20,
-            marginTop: 40,
+            paddingTop: 60,
             width: "100%",
             flexDirection: "row",
             justifyContent: "space-between",
