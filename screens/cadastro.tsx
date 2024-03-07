@@ -14,12 +14,12 @@ export default function Cadastro() {
     >
       <View>
         <Logo text="Cadastre-se" color="red" />
-        <InputField label="Nome" placeholder="Digite seu nome" hideText={false} />
-        <InputField label="Sobrenome" placeholder="Digite seu Sobrenome" hideText={false} />
-        <InputField label="Email" placeholder="Digite seu Email" hideText={false} />
-        <InputField label="Telefone" placeholder="Digite seu Telefone" hideText={false} />
-        <InputField label="Senha" placeholder="Digite sua Senha" hideText={true} />
-        <InputField label="Confirme sua Senha" placeholder="Confirme sua Senha" hideText={true}/>
+        <InputField label="Nome" placeholder="Digite seu nome" secureTextEntry={false} />
+        <InputField label="Sobrenome" placeholder="Digite seu Sobrenome" secureTextEntry={false} />
+        <InputField label="Email" placeholder="Digite seu Email" secureTextEntry={false} />
+        <InputField label="Telefone" placeholder="Digite seu Telefone" secureTextEntry={false} />
+        <InputField label="Senha" placeholder="Digite sua Senha" secureTextEntry={true} />
+        <InputField label="Confirme sua Senha" placeholder="Confirme sua Senha" secureTextEntry={true}/>
         <Botao text="Cadastrar" color="black" />
       </View>
     </KeyboardAwareScrollView>

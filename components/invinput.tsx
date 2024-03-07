@@ -1,16 +1,10 @@
 import React from 'react';
 import { View, Text, TextInput, StyleSheet } from 'react-native';
 
-export default function InventoryInput() {
-    return (
-        <View style={styles.inventoryInput}>
-            <TextInput style={styles.input} />
-            <Text style={[styles.label,]}>Nº Inventário</Text>
-        </View>
-    );
-}
 
-const styles = StyleSheet.create({
+export default function InventoryInput({label}) {
+    const [hover, sethover] = React.useState('black');
+    const styles = StyleSheet.create({
     inventoryInput: {
         marginLeft: 25,
         marginBottom: 10,
@@ -24,15 +18,27 @@ const styles = StyleSheet.create({
         left: 10,
         backgroundColor: '#fff',
         paddingHorizontal: 2,
+        color: hover,
         fontWeight: 'bold',
     },
     input: {
         padding: 5,
         borderWidth: 1,
-        borderColor: '#ccc',
+        borderColor: hover,
         borderRadius: 4,
         fontSize: 16,
         lineHeight: 24,
         width: '90%',
     },
 });
+    return (
+        <View style={styles.inventoryInput}>
+            <TextInput style={styles.input} 
+            
+            onFocus={() => sethover("#f39200")}
+            onBlur={() => sethover("black")}/>
+            <Text style={[styles.label,]}>{label}</Text>
+        </View>
+    );
+}
+

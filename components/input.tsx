@@ -1,33 +1,21 @@
 import React from 'react';
-import { TextInput, Text, View, StyleSheet } from 'react-native';
+import { TextInput, Text, View, StyleSheet, TextInputProps } from 'react-native';
 
-type InputFieldProps = {
-  label: string,
-  placeholder: string,
-  hideText: boolean, 
+interface InputFieldProps extends TextInputProps{
+  label: string;
 }
 
-const InputField = ({ label, placeholder, hideText }: InputFieldProps) => {
-  return (
-    <View>
-      <Text style={styles.text}>{label}</Text>
-        <TextInput
-          style={styles.input}
-          placeholder={placeholder}
-          secureTextEntry={hideText}
-        />
-    </View>
-  );
-};
 
-const styles = StyleSheet.create({
+export default function InputField({ label, placeholder, secureTextEntry }: InputFieldProps)  {
+  const [hover, sethover] = React.useState('#f5f5f5');
+  const styles = StyleSheet.create({
   input: {
     height: 40,
     width: '95%',
     margin: 12,
     padding: 10,
-    borderWidth: 0,
-    borderColor: 'black',
+    borderWidth: 1,
+    borderColor: hover,
     backgroundColor: '#f5f5f5',
     borderRadius: 10,
   },
@@ -37,6 +25,19 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginLeft: 25,
   },
-});
+  });
+  return (
+    <View>
+      <Text style={styles.text}>{label}</Text>
+        <TextInput
+          style={styles.input}
+          placeholder={placeholder}
+          secureTextEntry={secureTextEntry}
+          onFocus={() => sethover("#f39200")}
+          onBlur={() => sethover("#f5f5f5")}
+        />
+    </View>
+  );
+};
 
-export default InputField;
+

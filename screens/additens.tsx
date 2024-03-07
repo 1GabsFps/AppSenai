@@ -14,11 +14,11 @@ export default function AddItens() {
 <View>
     <Header text="Cadastro de itens" color="red" colortxt="white" icon1="arrowleft" icon2="pluscircleo"/>
     <View style={styles.paddingtop}>
-    <InventoryInput />
-    <InventoryInput />
-    <InventoryInput />
-    <InventoryInput />
-    <InventoryInput />
+    <InventoryInput label='N inventario'/>
+    <InventoryInput label='Descrição' />
+    <InventoryInput label='Local'/>
+    <InventoryInput label='Responsavel'/>
+    <InventoryInput label='Data de registro'/>
     </View>
     <Bottom color="ffff" coloricons= "#595959" bottom={-430} />
     </View>

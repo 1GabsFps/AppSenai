@@ -13,8 +13,8 @@ function login() {
       <View>
         <Text style={styles.text} >Faça Login Para Acessar o Sistema!</Text>
 
-        <InputField label="Email:" placeholder="Digite Email" hideText={false}/>
-        <InputField label="Senha:" placeholder="Digite sua Senha" hideText={true} />
+        <InputField label="Email:" placeholder="Digite Email" secureTextEntry={false}/>
+        <InputField label="Senha:" placeholder="Digite sua Senha" secureTextEntry={true} />
         <Botao text="Entrar" color="black" />
       </View>
       <View style={styles.links}>

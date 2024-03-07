@@ -4,10 +4,11 @@ import { StyleSheet, Text, View } from 'react-native';
 import Itens from './screens/itens';
 import AddItens from './screens/additens';
 import InfoItens from './screens/infoitens';
+import Cadastro from './screens/cadastro';
 export default function App() {
   return (
     <View>
-      <AddItens/>
+      <AddItens />
       <StatusBar style="auto" />
     </View>
   );
