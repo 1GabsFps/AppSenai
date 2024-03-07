@@ -5,10 +5,11 @@ import Itens from './screens/itens';
 import AddItens from './screens/additens';
 import InfoItens from './screens/infoitens';
 import Cadastro from './screens/cadastro';
+import Scanner from './screens/qrcode';
 export default function App() {
   return (
     <View>
-      <AddItens />
+      <InfoItens />
       <StatusBar style="auto" />
     </View>
   );

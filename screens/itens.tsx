@@ -36,7 +36,7 @@ const itens = () => {
             <View style={styles.addButtonContainer}>
                 <AntDesign name="pluscircle" size={50} color="red" />
             </View>
-            <Bottom color="#ff0000" coloricons= "#ffffff" bottom={0} />
+            <Bottom color="#ff0000" coloricons= "#ffffff" bottom={0} position="absolute" />
         </View>
     );
 };

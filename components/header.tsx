@@ -16,10 +16,10 @@ export default function Header({ text, color, colortxt, icon1, icon2 }) {
     return (
         <View>
             <View style={styles.displaytop}>
-                <AntDesign name={icon1} size={24} color={colortxt} />
+                {icon1}
                 <Text style={{ color: colortxt }}>{text}</Text>
                 <TouchableOpacity>
-                <AntDesign name={icon2} size={24} color={colortxt} />
+                {icon2}
                 </TouchableOpacity>
             </View>
         </View>
