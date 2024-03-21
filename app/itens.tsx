@@ -3,6 +3,7 @@ import { View, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
 import Itens from "../components/item";
 import { AntDesign,FontAwesome5, FontAwesome6, Entypo, Foundation} from '@expo/vector-icons';
 import Bottom from "../components/bottom";
+import { Link } from "expo-router";
 
 const itens = () => {
     return (
@@ -33,9 +34,11 @@ const itens = () => {
                 <Itens id="956389" item="CADEIRA  SENAI" />
             </View>
         </ScrollView>
-            <View style={styles.addButtonContainer}>
-                <AntDesign name="pluscircle" size={50} color="red" />
-            </View>
+            <Link href="/additens" asChild>
+                <TouchableOpacity style={styles.addButtonContainer}>
+                    <AntDesign name="pluscircle" size={50} color="red" />
+                </TouchableOpacity>
+            </Link>
             <Bottom color="#ff0000" coloricons= "#ffffff" bottom={0} position="absolute" />
         </View>
     );

@@ -12,7 +12,7 @@ function Recuperar(){
     </View>
     <Text style={styles.text}>Insira seu e-mail para recuperar a senha!</Text>
     <InputField  label="Email:" placeholder="Digite seu Email" secureTextEntry={false}/>
-    <Botao text="Recuperar" color="black" />
+    <Botao text="Recuperar" color="black" href="/index" />
     </View>
 )}
 
