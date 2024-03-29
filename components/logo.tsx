@@ -35,7 +35,7 @@ const Logo = ({text, color}: LogoProps ) => {
 
     return (
         <View style={styles.header}>
-            <Image source={require('./img/Logo.png')} style={styles.logo} />
+            <Image source={require('../assets/Logo.png')} style={styles.logo} />
             <Text style={styles.headerText}>{text}</Text>
         </View>
     );

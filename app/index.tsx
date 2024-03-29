@@ -17,7 +17,7 @@ function login() {
         <InputField label="Email:" placeholder="Digite Email" secureTextEntry={false} />
         <InputField label="Senha:" placeholder="Digite sua Senha" secureTextEntry={true} />
         <Link href="/itens" asChild>
-          <Botao text="Entrar" color="black" href="/itens"/>
+          <Botao text="Entrar" color="black" href="./drawer/home/itens"/>
         </Link>
       </View>
       <View style={styles.links}>

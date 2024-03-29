@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import Header from "../components/header";
-import Bottom from "../components/bottom";
+import Header from "../../../components/header";
+import Bottom from "../../../components/bottom";
 import { MaterialIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 
