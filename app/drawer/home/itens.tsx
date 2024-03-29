@@ -9,12 +9,6 @@ const itens = () => {
     return (
         <View>
         <ScrollView>
-            <View style={styles.displaytop}>
-                <Foundation name="list" size={24} color="#595959" />
-                <TouchableOpacity>
-                    <Entypo name="magnifying-glass" size={24} color="#595959" />
-                </TouchableOpacity>
-            </View>
             <View>
                 <Itens id="956389" item="CADEIRA  SENAI" />
                 <Itens id="956389" item="CADEIRA  SENAI" />
@@ -39,7 +33,6 @@ const itens = () => {
                     <AntDesign name="pluscircle" size={50} color="red" />
                 </TouchableOpacity>
             </Link>
-            <Bottom color="#ff0000" coloricons= "#ffffff" bottom={0} position="absolute" />
         </View>
     );
 };

@@ -13,7 +13,7 @@ export default function AddItens() {
     return (
         <View>
 <View>
-    <Header text="Cadastro de itens" color="red" colortxt="white" icon1={<AntDesign name="arrowleft" size={24} color="white" />} icon2={<AntDesign name="checkcircle" size={24} color="white" />}/>
+    <Header cor="#ff0000" texto="Adicionar Itens" />
     <View style={styles.paddingtop}>
     <InventoryInput label='N inventario'/>
     <InventoryInput label='Descrição' />
