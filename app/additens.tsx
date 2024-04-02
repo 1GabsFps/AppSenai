@@ -20,7 +20,6 @@ export default function AddItens() {
     <InventoryInput label='Responsavel'/>
     <InventoryInput label='Data de registro'/>
     </View>
-    <Bottom color="ffff" coloricons= "#595959" bottom={0} position="fixed" />
     </View>
 </View>
     );

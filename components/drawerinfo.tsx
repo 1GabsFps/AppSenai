@@ -2,6 +2,7 @@
 import { View, Text, StyleSheet} from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
+
 export default function DrawerInfo({ icon, Titulo, t1, t2}){
     const info = !!t1 || !!t2;
     return(

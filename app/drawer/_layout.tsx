@@ -1,7 +1,8 @@
 import { Drawer } from "expo-router/drawer";
 import { StyleSheet, Text, View, Image} from "react-native";
-import { MaterialIcons } from '@expo/vector-icons';
+import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 import DrawerInfo from "../../components/drawerinfo";
+import { Ionicons } from '@expo/vector-icons';
 
 export default function Layout() {
 
@@ -27,10 +28,10 @@ return (
                         <Text style={styles.secundario}>flavio@email.com</Text>
                     </View>
                 </View>
-                <DrawerInfo icon={<MaterialIcons name="qr-code-scanner" size={17} color="#D9D9D9" />} Titulo="Perfil" t1="Alterar e-mail" t2="Alterar senha" />
-                <DrawerInfo icon={<MaterialIcons name="qr-code-scanner" size={17} color="#D9D9D9" />} Titulo="Sobre o App" t1="" t2="" />
-                <DrawerInfo icon={<MaterialIcons name="qr-code-scanner" size={17} color="#D9D9D9" />} Titulo="Suporte" t1="" t2=""/>
-                <DrawerInfo icon={<MaterialIcons name="qr-code-scanner" size={17} color="#D9D9D9" />} Titulo="Sair"  t1="" t2=""/>
+                <DrawerInfo icon={<Ionicons name="person" size={17} color="#D9D9D9" />} Titulo="Perfil" t1="Alterar e-mail" t2="Alterar senha" />
+                <DrawerInfo icon={<FontAwesome6 name="circle-exclamation" size={17} color="#D9D9D9" />} Titulo="Sobre o App" t1="" t2="" />
+                <DrawerInfo icon={<Ionicons name="chatbox-ellipses" size={17} color="#D9D9D9" />} Titulo="Suporte" t1="" t2=""/>
+                <DrawerInfo icon={<Ionicons name="exit" size={17} color="#D9D9D9" />} Titulo="Sair"  t1="" t2=""/>
             </View>
         );
     }}
