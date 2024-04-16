@@ -1,5 +1,6 @@
 import React from 'react';
-import { TextInput, Text, View, StyleSheet, TextInputProps } from 'react-native';
+import { TextInput, Text, View, StyleSheet, TextInputProps, useColorScheme } from 'react-native';
+import  useTheme from "../temas/Temas";
 
 interface InputFieldProps extends TextInputProps{
   label: string;
@@ -8,6 +9,7 @@ interface InputFieldProps extends TextInputProps{
 
 export default function InputField({ label, placeholder, secureTextEntry }: InputFieldProps)  {
   const [hover, sethover] = React.useState('#f5f5f5');
+  const cores = useTheme();
   const styles = StyleSheet.create({
   input: {
     height: 40,
@@ -16,12 +18,13 @@ export default function InputField({ label, placeholder, secureTextEntry }: Inpu
     padding: 10,
     borderWidth: 1,
     borderColor: hover,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: cores.bgprimaryvariant,
     borderRadius: 10,
   },
   text: {
     fontSize: 14,
-    color: 'black',
+    color: cores.textColor,
+    
     marginTop: 10,
     marginLeft: 25,
   },
@@ -33,6 +36,7 @@ export default function InputField({ label, placeholder, secureTextEntry }: Inpu
           style={styles.input}
           placeholder={placeholder}
           secureTextEntry={secureTextEntry}
+          placeholderTextColor={cores.textcolorvariant}
           onFocus={() => sethover("#f39200")}
           onBlur={() => sethover("#f5f5f5")}
         />

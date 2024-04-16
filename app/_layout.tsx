@@ -12,7 +12,7 @@ export default function Layout() {
     <Stack.Screen name="index" options={{ statusBarColor:"#000000"}}/>
     <Stack.Screen name="additens" options={{statusBarColor:"#FF0000",
     headerTintColor: '#ff0000',
-   }}/>
+  }}/>
     <Stack.Screen name="cadastro" options={{statusBarColor:"#FF0000"}}/>
     <Stack.Screen name="infoitens" options={{statusBarColor:"#FF0000"}}/>
     <Stack.Screen name="editar" options={{statusBarColor:"#FF0000"}}/> 

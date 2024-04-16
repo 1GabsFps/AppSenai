@@ -1,15 +1,26 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity} from "react-native";
 import Logo from "../components/logo";
 import InputField from "../components/input";
 import Botao from "../components/botao";
 import { Link } from "expo-router";
+import useTheme from "../temas/Temas";
 
 function login() {
+
+  const cores = useTheme();
+
   return (
     <View>
+    <View style={
+      {
+        backgroundColor: cores.bgPrimary,
+        height: '100%',
+      }
+    
+    }>
       <View>
-        <Logo text="Login" color="black" />
+        <Logo text="Login" color={cores.bgPrimary} />
       </View>
       <View>
         <Text style={styles.text}>Faça Login Para Acessar o Sistema!</Text>
@@ -17,21 +28,24 @@ function login() {
         <InputField label="Email:" placeholder="Digite Email" secureTextEntry={false} />
         <InputField label="Senha:" placeholder="Digite sua Senha" secureTextEntry={true} />
         <Link href="./drawer/home/index" asChild>
-          <Botao text="Entrar" color="black" href="./drawer/home/itens"/>
+          <Botao text="Entrar" color={cores.bgSecondary} href="./drawer/home/itens"/>
         </Link>
       </View>
-      <View style={styles.links}>
+      <View>
+        <View style={styles.links}>
         <Link href="/cadastro" asChild>
           <TouchableOpacity>
-            <Text style={styles.link}>Cadastre-Se</Text>
+            <Text style={[styles.link, {color: cores.textColor}]}>Cadastre-Se</Text>
           </TouchableOpacity>
         </Link>
         <Link href="/rec" asChild>
           <TouchableOpacity>
-            <Text style={styles.link}>Esqueceu sua senha?</Text>
+            <Text style={[styles.link, {color: cores.textColor}]}>Esqueceu sua senha?</Text>
           </TouchableOpacity>
         </Link>
+        </View>
       </View>
+    </View>
     </View>
   );
 }
@@ -47,7 +61,7 @@ const styles = StyleSheet.create({
   },
   link: {
     fontSize: 14,
-    color: 'blue',
+    
   },
   links: {
     flexDirection: 'row',

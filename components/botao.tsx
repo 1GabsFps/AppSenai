@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import { TouchableOpacity, Text, StyleSheet, useColorScheme } from "react-native";
 import { Link } from "expo-router";
 
 type BotaoProps = {
@@ -8,7 +8,9 @@ type BotaoProps = {
     href: string,
 }
 
+
 const Botao= ({text, color, href}: BotaoProps) => {
+
     const styles = StyleSheet.create({
         botao: {
             alignItems: 'center',
