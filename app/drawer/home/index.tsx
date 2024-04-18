@@ -1,23 +1,30 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, StatusBar} from "react-native";
 import { MaterialIcons } from '@expo/vector-icons';
+import useTheme from "../../../temas/Temas";
+
 
 
 export default function Scanner() {
-
+    const cores = useTheme();
     const styles = StyleSheet.create({
         displaycode: {
             justifyContent: "center",
             alignItems: "center",
-            paddingTop: 300,
-            backgroundColor: "#FBFBFB",
+            backgroundColor: cores.bgPrimary,
+            height: "100%",
+
         },
     });
 
     return(
+    <>
+    <StatusBar backgroundColor={cores.bgPrimaryVariant} barStyle="light-content" />
     <View style={styles.displaycode}>
-        <MaterialIcons name="qr-code-scanner" size={300} color="#5d5c5c" />
+        <StatusBar backgroundColor={cores.bgPrimary} barStyle="light-content" />
+        <MaterialIcons name="qr-code-scanner" size={300} color={cores.textColor} />
     </View>
+    </>
 
 
 );

@@ -10,6 +10,26 @@ function login() {
 
   const cores = useTheme();
 
+  const styles = StyleSheet.create({
+  text: {
+    fontSize: 20,
+    fontWeight: '500',
+    color: cores.textColor,
+    alignContent: 'center',
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  link: {
+    fontSize: 14,
+    
+  },
+  links: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    margin: 20,
+  },
+});
+
   return (
     <View>
     <View style={
@@ -50,24 +70,5 @@ function login() {
   );
 }
 
-const styles = StyleSheet.create({
-  text: {
-    fontSize: 20,
-    fontWeight: '500',
-    color: 'black',
-    alignContent: 'center',
-    textAlign: 'center',
-    marginBottom: 20,
-  },
-  link: {
-    fontSize: 14,
-    
-  },
-  links: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    margin: 20,
-  },
-});
 
 export default login;

@@ -18,7 +18,7 @@ export default function InputField({ label, placeholder, secureTextEntry }: Inpu
     padding: 10,
     borderWidth: 1,
     borderColor: hover,
-    backgroundColor: cores.bgprimaryvariant,
+    backgroundColor: cores.bgPrimaryVariant,
     borderRadius: 10,
   },
   text: {
@@ -36,7 +36,7 @@ export default function InputField({ label, placeholder, secureTextEntry }: Inpu
           style={styles.input}
           placeholder={placeholder}
           secureTextEntry={secureTextEntry}
-          placeholderTextColor={cores.textcolorvariant}
+          placeholderTextColor={cores.textColorVariant}
           onFocus={() => sethover("#f39200")}
           onBlur={() => sethover("#f5f5f5")}
         />

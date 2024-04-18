@@ -1,24 +1,54 @@
 import { Drawer } from "expo-router/drawer";
-import { StyleSheet, Text, View, Image} from "react-native";
+import { StyleSheet, Text, View, Image, StatusBar} from "react-native";
 import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 import DrawerInfo from "../../components/drawerinfo";
 import { Ionicons } from '@expo/vector-icons';
+import useTheme from "../../temas/Temas";
 
 export default function Layout() {
+    const cores = useTheme();
+
+    const styles = StyleSheet.create({
+principal: {
+    fontSize: 14,
+    lineHeight: 16.94,
+    fontWeight: "600",
+    color: cores.textColor,
+},
+secundario:{
+    fontSize: 12,
+    lineHeight: 14.52,
+    fontWeight: "400",
+    color: cores.textColorVariant,
+},
+foto: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+},
+});
 
 return (
+    <>
+    <StatusBar backgroundColor={cores.bgPrimaryVariant} barStyle="light-content" />
     <Drawer
     drawerContent={() => {
         return (
-            <View>
+            <View
+            style={{
+                backgroundColor: cores.bgPrimaryVariant,
+                height: "100%",
+            
+            }}>
                 <View style={{
                     paddingTop: 20,
                     paddingBottom: 20,
                     padding: 24,
                     gap: 16,
                     flexDirection: "row",
-                    borderBottomColor : "#D9D9D9",
+                    borderBottomColor : cores.bgInfo,
                     borderBottomWidth: 1,
+                    backgroundColor: cores.bgPrimaryVariant,
                 }}>
                     <Image source={require('../../assets/perfil.jpg')} style={styles.foto} />
                     <View style={{
@@ -43,23 +73,5 @@ return (
     }}
     >
     </Drawer>
-);
-}
-
-const styles = StyleSheet.create({
-principal: {
-    fontSize: 14,
-    lineHeight: 16.94,
-    fontWeight: "600",
-},
-secundario:{
-    fontSize: 12,
-    lineHeight: 14.52,
-    fontWeight: "400",
-},
-foto: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-},
-});
+    </>
+);}

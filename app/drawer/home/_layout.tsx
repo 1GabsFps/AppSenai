@@ -2,15 +2,25 @@ import { DrawerToggleButton } from "@react-navigation/drawer";
 import { Tabs } from "expo-router";
 import { ScreenStackHeaderSearchBarView } from "react-native-screens";
 import { FontAwesome5, FontAwesome6 } from '@expo/vector-icons';
+import useTheme from "../../../temas/Temas";
+import { StatusBar } from "react-native";
+
 
 export default function Layout(){
-    return <Tabs screenOptions={{
+    const cores = useTheme();
+    return(
+    <>
+    <StatusBar backgroundColor={cores.bgPrimaryVariant} barStyle="light-content" />
+    <Tabs screenOptions={{
         headerTitleAlign: "center",
         headerStyle: {
-            backgroundColor: "#FF0000",
+            backgroundColor: cores.bgPrimary,
+            
         },
+        headerTintColor: cores.textColor,
         headerLeft: () => (
-            <DrawerToggleButton />
+            <DrawerToggleButton tintColor={cores.textColor} />
+        
         ),
 
         headerRight: () => (
@@ -25,8 +35,14 @@ export default function Layout(){
         options={{
             title: "Scanner",
             tabBarIcon: ({ color }) => (
-                <FontAwesome6 name="camera-rotate" size={24} color={595959} />
+                <FontAwesome6 name="camera-rotate" size={24} color={cores.textColor} />
             ),
+                        tabBarStyle: {
+                backgroundColor: cores.bgSecondary,
+                
+            },
+            tabBarActiveTintColor: cores.textColor,
+            tabBarInactiveTintColor: cores.textColorVariant,
         
         }}>
 
@@ -37,11 +53,19 @@ export default function Layout(){
         options={{
             title: "Itens",
             tabBarIcon: ({ color }) => (
-                <FontAwesome5 name="list-ol" size={24} color={595959} />
+                <FontAwesome5 name="list-ol" size={24} color={cores.textColor} />
             ),
+            tabBarStyle: {
+                backgroundColor: cores.bgSecondary,
+                
+            },
+            tabBarActiveTintColor: cores.textColor,
+            tabBarInactiveTintColor: cores.textColorVariant,
         }}>
 
         </Tabs.Screen>
         
-    </Tabs>;
+    </Tabs>
+    </>
+    )
 }

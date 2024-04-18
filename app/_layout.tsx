@@ -1,7 +1,12 @@
 import { Stack } from 'expo-router';
+import { StatusBar } from 'react-native';
+import useTheme from '../temas/Temas';
 
 export default function Layout() {
+  const cores = useTheme();
   return (
+    <>
+    <StatusBar backgroundColor={cores.bgPrimaryVariant} barStyle="light-content" />
     <Stack
       screenOptions={{
         headerTransparent: true, 
@@ -19,5 +24,6 @@ export default function Layout() {
     <Stack.Screen name="rec" options={{statusBarColor:"#011E83"}}/> 
     <Stack.Screen name="drawer" options={{headerShown:false}}/> 
     </Stack>
+    </>
   );
 }

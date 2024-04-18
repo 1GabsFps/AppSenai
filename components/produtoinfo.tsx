@@ -1,7 +1,9 @@
 import React from "react";
 import { View, Text, StyleSheet} from "react-native";
-
+import useTheme
+ from "../temas/Temas";
 export default function ProdutoInfo({label, info}) {
+    const cores = useTheme();
 const styles = StyleSheet.create({
     view :{
         marginTop: 20,
@@ -9,7 +11,7 @@ const styles = StyleSheet.create({
     text : {
         fontSize: 20,
         fontWeight: '500',
-        color: 'black',
+        color: cores.textColor,
         alignContent: 'center',
         marginTop: 20,
         marginLeft: 25,
@@ -17,7 +19,7 @@ const styles = StyleSheet.create({
     item: {
         fontSize: 20,
         fontWeight: '500',
-        color: 'lightgray',
+        color: cores.textColorVariant,
         alignContent: 'center',
         marginTop: 10,
         marginLeft: 25,

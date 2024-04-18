@@ -1,20 +1,18 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import Header from "../components/header";
 import ProdutoInfo from "../components/produtoinfo";
-import Bottom from "../components/bottom";
-import { Ionicons } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import useTheme from "../temas/Temas";
 export default function InfoItens() {
+    const cores = useTheme();
     const styles = StyleSheet.create({
         paddingtop: {
-            paddingTop: 60,
-            backgroundColor: "#FBFBFB",
+            backgroundColor: cores.bgPrimary,
+            
         },
-            addButtonContainer: {
+    addButtonContainer: {
     position: "absolute",
-    bottom: -250,
+    bottom: 20,
     right: 0,
     margin: 20,
     marginBottom: 40,
@@ -22,16 +20,17 @@ export default function InfoItens() {
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: "#ffffff",
+    backgroundColor: cores.bgPrimary,
     alignItems: "center",
     justifyContent: "center",
 },
         },);
     return(
-        <View>
-            <View>
-                <Header cor="#ff0000" texto="Informações do Item" />
-            </View>
+        <View style={{
+            paddingTop: 150,
+            backgroundColor: cores.bgPrimary,
+            height: "100%",
+        }}>
             <View style={styles.paddingtop}>
                 <ProdutoInfo label='N inventario' info='956389'/>
                 <ProdutoInfo label='Descrição' info='CADEIRA  SENAI'/>
@@ -41,9 +40,6 @@ export default function InfoItens() {
             </View>
             <View style={styles.addButtonContainer}>
                 <MaterialCommunityIcons name="pencil-circle" size={60} color="red" />
-            </View>
-            <View>
-                <Bottom color="ffff" coloricons= "#595959" position="fixed" bottom={-325}/>
             </View>
         </View>
     )
