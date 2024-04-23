@@ -1,30 +1,31 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
 import ProdutoInfo from "../components/produtoinfo";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import useTheme from "../temas/Temas";
+import { Link } from "expo-router";
+
 export default function InfoItens() {
     const cores = useTheme();
     const styles = StyleSheet.create({
         paddingtop: {
             backgroundColor: cores.bgPrimary,
-            
         },
-    addButtonContainer: {
-    position: "absolute",
-    bottom: 20,
-    right: 0,
-    margin: 20,
-    marginBottom: 40,
-    marginRight: 20,
-    width: 60,
-    height: 60,
-    borderRadius: 30,
-    backgroundColor: cores.bgPrimary,
-    alignItems: "center",
-    justifyContent: "center",
-},
-        },);
+        addButtonContainer: {
+            position: "absolute",
+            bottom: 20,
+            right: 0,
+            margin: 20,
+            marginBottom: 40,
+            marginRight: 20,
+            width: 60,
+            height: 60,
+            borderRadius: 30,
+            backgroundColor: cores.bgPrimary,
+            alignItems: "center",
+            justifyContent: "center",
+        },
+    });
     return(
         <View style={{
             paddingTop: 150,
@@ -39,7 +40,11 @@ export default function InfoItens() {
                 <ProdutoInfo label='Data de registro' info='12/12/2021'/>
             </View>
             <View style={styles.addButtonContainer}>
-                <MaterialCommunityIcons name="pencil-circle" size={60} color="red" />
+                <Link href="/editar" asChild>
+                    <TouchableOpacity>
+                        <MaterialCommunityIcons name="pencil-circle" size={60} color="red" />
+                    </TouchableOpacity>
+                </Link>
             </View>
         </View>
     )
