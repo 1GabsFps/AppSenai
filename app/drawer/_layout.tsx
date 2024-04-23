@@ -30,11 +30,11 @@ foto: {
 
 return (
     <>
-    <StatusBar backgroundColor={cores.bgPrimaryVariant} barStyle="light-content" />
     <Drawer
     drawerContent={() => {
         return (
             <View
+            
             style={{
                 backgroundColor: cores.bgPrimaryVariant,
                 height: "100%",

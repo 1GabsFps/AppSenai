@@ -3,32 +3,27 @@ import { Tabs } from "expo-router";
 import { ScreenStackHeaderSearchBarView } from "react-native-screens";
 import { FontAwesome5, FontAwesome6 } from '@expo/vector-icons';
 import useTheme from "../../../temas/Temas";
-import { StatusBar } from "react-native";
+import { TouchableOpacity } from "react-native";
 
 
 export default function Layout(){
     const cores = useTheme();
     return(
     <>
-    <StatusBar backgroundColor={cores.bgPrimaryVariant} barStyle="light-content" />
-    <Tabs screenOptions={{
+        <Tabs screenOptions={{
         headerTitleAlign: "center",
         headerStyle: {
             backgroundColor: cores.bgPrimary,
-            
         },
         headerTintColor: cores.textColor,
         headerLeft: () => (
             <DrawerToggleButton tintColor={cores.textColor} />
-        
         ),
-
         headerRight: () => (
-            ScreenStackHeaderSearchBarView ({
-                placeholder: "Pesquisar",
-            })
+            <TouchableOpacity>
+                <FontAwesome5 name="search" size={24} color={cores.textColor} />
+            </TouchableOpacity>
         )
-        
     }}>
         <Tabs.Screen
         name="index"
@@ -43,7 +38,7 @@ export default function Layout(){
             },
             tabBarActiveTintColor: cores.bgPrimary,
             tabBarInactiveTintColor: cores. bgPrimary,
-        
+    
         }}>
 
         </Tabs.Screen>

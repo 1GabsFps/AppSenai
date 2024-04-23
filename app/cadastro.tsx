@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, useColorScheme } from 'react-native';
+import { View, useColorScheme, StatusBar } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import Logo from '../components/logo';
 import InputField from '../components/input';
@@ -21,6 +21,7 @@ export default function Cadastro() {
       <View style={
         {backgroundColor: cores.bgPrimary, height: '100%'}
       }>
+        <StatusBar backgroundColor={cores.bgPrimaryVariant} barStyle="light-content" />
         <Logo text="Cadastre-se" color={backgroundColor} />
         <InputField label="Nome" placeholder="Digite seu nome" secureTextEntry={false} />
         <InputField label="Sobrenome" placeholder="Digite seu Sobrenome" secureTextEntry={false} />

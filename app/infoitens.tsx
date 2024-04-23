@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, StyleSheet, TouchableOpacity, StatusBar } from "react-native";
 import ProdutoInfo from "../components/produtoinfo";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import useTheme from "../temas/Temas";
@@ -32,6 +32,7 @@ export default function InfoItens() {
             backgroundColor: cores.bgPrimary,
             height: "100%",
         }}>
+            <StatusBar backgroundColor={cores.bgPrimaryVariant} barStyle="light-content" />
             <View style={styles.paddingtop}>
                 <ProdutoInfo label='N inventario' info='956389'/>
                 <ProdutoInfo label='Descrição' info='CADEIRA  SENAI'/>

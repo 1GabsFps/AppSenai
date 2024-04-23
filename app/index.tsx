@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity, useColorScheme} from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, useColorScheme, StatusBar} from "react-native";
 import Logo from "../components/logo";
 import InputField from "../components/input";
 import Botao from "../components/botao";
@@ -36,6 +36,7 @@ function login() {
 
   return (
     <View>
+        <StatusBar backgroundColor={cores.bgPrimaryVariant} barStyle="light-content" />
     <View style={
       {
         backgroundColor: cores.bgPrimary,
