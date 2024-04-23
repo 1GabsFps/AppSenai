@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity} from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, useColorScheme} from "react-native";
 import Logo from "../components/logo";
 import InputField from "../components/input";
 import Botao from "../components/botao";
@@ -9,6 +9,10 @@ import useTheme from "../temas/Temas";
 function login() {
 
   const cores = useTheme();
+
+  const Theme = useColorScheme();
+  const backgroundColor = Theme === 'dark' ? cores.bgPrimary : '#000000';
+  const corbotoes = Theme === 'dark' ? cores.bgSecondary : '#000000';
 
   const styles = StyleSheet.create({
   text: {
@@ -40,7 +44,7 @@ function login() {
     
     }>
       <View>
-        <Logo text="Login" color={cores.bgPrimary} />
+        <Logo text="Login" color={backgroundColor} />
       </View>
       <View>
         <Text style={styles.text}>Faça Login Para Acessar o Sistema!</Text>
@@ -48,7 +52,7 @@ function login() {
         <InputField label="Email:" placeholder="Digite Email" secureTextEntry={false} />
         <InputField label="Senha:" placeholder="Digite sua Senha" secureTextEntry={true} />
         <Link href="./drawer/home/index" asChild>
-          <Botao text="Entrar" color={cores.bgSecondary} href="./drawer/home/itens"/>
+          <Botao text="Entrar" color={corbotoes} href="./drawer/home/itens"/>
         </Link>
       </View>
       <View>
@@ -60,7 +64,7 @@ function login() {
         </Link>
         <Link href="/rec" asChild>
           <TouchableOpacity>
-            <Text style={[styles.link, {color: cores.textColor}]}>Esqueceu sua senha?</Text>
+            <Text style={[styles.link, {color: cores.textColor}]}>Esqueceu sua senha? </Text>
           </TouchableOpacity>
         </Link>
         </View>

@@ -3,7 +3,7 @@ import { View, Text, TextInput, StyleSheet, useColorScheme } from 'react-native'
 import useTheme from '../temas/Temas';
 
 export default function InventoryInput({label}) {
-    const [hover, sethover] = React.useState('white');
+    const [hover, sethover] = React.useState('#5D5C5C');
     const cores = useTheme();
     const styles = StyleSheet.create({
     inventoryInput: {
@@ -37,7 +37,7 @@ export default function InventoryInput({label}) {
             <TextInput style={styles.input} 
             
             onFocus={() => sethover("#f39200")}
-            onBlur={() => sethover("#fff")}/>
+            onBlur={() => sethover("#5D5C5C")}/>
             <Text style={[styles.label,]}>{label}</Text>
         </View>
     );

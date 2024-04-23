@@ -35,14 +35,14 @@ export default function Layout(){
         options={{
             title: "Scanner",
             tabBarIcon: ({ color }) => (
-                <FontAwesome6 name="camera-rotate" size={24} color={cores.textColor} />
+                <FontAwesome6 name="camera-rotate" size={24} color={cores.bgPrimary} />
             ),
                         tabBarStyle: {
                 backgroundColor: cores.bgSecondary,
                 
             },
-            tabBarActiveTintColor: cores.textColor,
-            tabBarInactiveTintColor: cores.textColorVariant,
+            tabBarActiveTintColor: cores.bgPrimary,
+            tabBarInactiveTintColor: cores. bgPrimary,
         
         }}>
 
@@ -53,14 +53,14 @@ export default function Layout(){
         options={{
             title: "Itens",
             tabBarIcon: ({ color }) => (
-                <FontAwesome5 name="list-ol" size={24} color={cores.textColor} />
+                <FontAwesome5 name="list-ol" size={24} color={cores.bgPrimary} />
             ),
             tabBarStyle: {
                 backgroundColor: cores.bgSecondary,
                 
             },
-            tabBarActiveTintColor: cores.textColor,
-            tabBarInactiveTintColor: cores.textColorVariant,
+            tabBarActiveTintColor: cores.bgPrimary,
+            tabBarInactiveTintColor: cores.bgPrimary,
         }}>
 
         </Tabs.Screen>
