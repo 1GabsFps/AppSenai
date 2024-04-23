@@ -45,7 +45,7 @@ function login() {
     
     }>
       <View>
-        <Logo text="Login" color={backgroundColor} />
+        <Logo text="Login " color={backgroundColor} />
       </View>
       <View>
         <Text style={styles.text}>Faça Login Para Acessar o Sistema!</Text>

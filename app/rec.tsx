@@ -6,6 +6,7 @@ import { Image, Text, View, StyleSheet, StatusBar, useColorScheme } from "react-
 import useTheme from "../temas/Temas";
 
 
+
 function Recuperar(){
     const cores = useTheme();
     const Theme = useColorScheme();
@@ -34,7 +35,7 @@ function Recuperar(){
     </View>
     <Text style={styles.text}>Insira seu e-mail para recuperar a senha!</Text>
     <InputField  label="Email:" placeholder="Digite seu Email" secureTextEntry={false}/>
-    <Botao text="Recuperar " color={corbotoes} href="index" />
+    <Botao text="Recuperar " color={corbotoes} href="." />
     </View>
     </>
 )}
